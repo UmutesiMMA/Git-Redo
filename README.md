@@ -264,4 +264,154 @@ $
 ### Exercise1
 ```bash
 
+user@DESKTOP-TQVNUUS MINGW64 ~
+$ cd ~/Documents/TheGym2/Git/
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git switch dev
+error: Your local changes to the following files would be overwritten by checkou
+t:
+        about.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git commit -m "about changes"
+[main 9dd0e06] about changes
+ 2 files changed, 13 insertions(+), 2 deletions(-)
+ create mode 100644 team.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git switch dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (dev)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (dev)
+$ git commit -m "update"
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+nothing to commit, working tree clean
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (dev)
+$ git push
+Everything up-to-date
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (dev)
+$ git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git push
+To https://github.com/UmutesiMMA/Git-Redo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/UmutesiMMA/Git-Redo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 2.35 KiB | 63.00 KiB/s, done.
+From https://github.com/UmutesiMMA/Git-Redo
+   81b8c35..9f059f0  main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 267 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 267 insertions(+)
+ create mode 100644 README.md
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 697 bytes | 232.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/UmutesiMMA/Git-Redo.git
+   9f059f0..26c189e  main -> main
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ ls
+README.md  about.html  home.html  index.html  start.html  style.css  team.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git branch ft/bundle-2
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git switch ft/bundle-2
+Switched to branch 'ft/bundle-2'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/bundle-2)
+$ touch services.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/bundle-2)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/bundle-2)
+$ git commit -m "services page"
+[ft/bundle-2 72b6c7e] services page
+ 1 file changed, 17 insertions(+)
+ create mode 100644 services.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/bundle-2)
+$ ^C
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 484 bytes | 242.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/Git-Redo/pull/new/ft/bundle-2
+remote:
+To https://github.com/UmutesiMMA/Git-Redo.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git pull
+Already up to date.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git switch -c ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+
 ```
