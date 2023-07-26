@@ -682,53 +682,6 @@ branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/contact-page)
 $ git branch ft/faq-page
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [ft/faq-page 7301c40] this reverts 50c22bcf71a97db072af79223a9b7674c415fe2f.
  1 file changed, 21 deletions(-)
 
