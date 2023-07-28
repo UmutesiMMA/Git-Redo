@@ -710,7 +710,7 @@ nothing to commit, working tree clean
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/faq-page)
 $
 ```
-## Exercise 3
+## Exercise 2
 ``` bash
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/faq-page)
 $ git branch ft/home-page-redesign
@@ -811,7 +811,7 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/home-page-redesign)
 $
 ```
-## Bundle3
+## Bundle 4
 ### Exercise 1
 ```bash
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
