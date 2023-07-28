@@ -811,4 +811,179 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/home-page-redesign)
 $
 ```
+## Bundle3
+### Exercise 1
+```bash
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git remote add gitCopy https://github.com/UmutesiMMA/git-copy.git
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git commit -m "changes on the home page"
+[main 1bd74e9] changes on the home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git push origin main
+To https://github.com/UmutesiMMA/Git-Redo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/UmutesiMMA/Git-Redo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.20 KiB | 94.00 KiB/s, done.
+From https://github.com/UmutesiMMA/Git-Redo
+   0e6498d..21f374d  main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 101 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 101 insertions(+)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 594 bytes | 594.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/UmutesiMMA/Git-Redo.git
+   21f374d..d79d8f1  main -> main
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git push gitCopy main
+Enumerating objects: 45, done.
+Counting objects: 100% (45/45), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (44/44), done.
+Writing objects: 100% (45/45), 11.55 KiB | 1.28 MiB/s, done.
+Total 45 (delta 23), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (23/23), done.
+To https://github.com/UmutesiMMA/git-copy.git
+ * [new branch]      main -> main
+```
+### Exercise2
+```bash
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/footer)
+$ touch footer.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/footer)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/footer)
+$ git commit -m "footer page"
+[ft/footer 65d4eb1] footer page
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 footer.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/footer)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/footer)
+$ git commit -m "footer content"
+[ft/footer fc3ae22] footer content
+ 1 file changed, 13 insertions(+)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 758 bytes | 379.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/Git-Redo/pull/new/ft/footer
+remote:
+To https://github.com/UmutesiMMA/Git-Redo.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/footer)
+$ git switch
+fatal: missing branch or commit argument
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/footer)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/squashing)
+$ git merge --squash ft/footer
+Updating d79d8f1..fc3ae22
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 9a6bdf3] footer changes squashing
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/squashing)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/squashing)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 563 bytes | 563.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/Git-Redo/pull/new/ft/squashing
+remote:
+To https://github.com/UmutesiMMA/Git-Redo.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/squashing)
+$
+```
 
