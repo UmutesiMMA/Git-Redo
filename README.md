@@ -710,4 +710,105 @@ nothing to commit, working tree clean
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/faq-page)
 $
 ```
+## Exercise 3
+``` bash
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/faq-page)
+$ git branch ft/home-page-redesign
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/faq-page)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git commit -m "changes on start page"
+[main f63f57f] changes on start page
+ 1 file changed, 11 insertions(+)
+g
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git push
+To https://github.com/UmutesiMMA/Git-Redo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/UmutesiMMA/Git-Redo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 3.16 KiB | 95.00 KiB/s, done.
+From https://github.com/UmutesiMMA/Git-Redo
+   539a860..556643b  main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 296 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 296 insertions(+)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 695 bytes | 173.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/UmutesiMMA/Git-Redo.git
+   556643b..0e6498d  main -> main
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/home-page-redesign)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/home-page-redesign)
+$ git commit -m "changes on the home page"
+[ft/home-page-redesign 7251fec] changes on the home page
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.73 KiB | 296.00 KiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/Git-Redo/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/UmutesiMMA/Git-Redo.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/home-page-redesign)
+$
+```
 
