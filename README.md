@@ -986,4 +986,147 @@ branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (ft/squashing)
 $
 ```
+## Bundle6
+### Exercise1
+```bash
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git (main)
+$ cd git-cafe-exercise/
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (main)
+$ git branch ft/menu
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (main)
+$ git switch ft/menu
+Switched to branch 'ft/menu'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/menu)
+$ touch Menu.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/menu)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/menu)
+$ git commit -m "menu"
+[ft/menu 35d558d] menu
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Menu.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/menu)
+$ git push
+fatal: The current branch ft/menu has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/menu
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/menu)
+$ git push --set-upstream origin ft/menu
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 422 bytes | 211.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/git-cafe-exercise/pull/new/ft/menu
+remote:
+To https://github.com/UmutesiMMA/git-cafe-exercise.git
+ * [new branch]      ft/menu -> ft/menu
+branch 'ft/menu' set up to track 'origin/ft/menu'.
+```
+### Exercise2
+```bash
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/menu)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (main)
+$ git switch -c ft/bugFix
+Switched to a new branch 'ft/bugFix'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/bugFix)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/bugFix)
+$ git commit -m "title to Contact"
+[ft/bugFix a878c52] title to Contact
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/bugFix)
+$ git push
+fatal: The current branch ft/bugFix has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bugFix
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/bugFix)
+$ git push --set-upstream origin ft/bugFix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 299 bytes | 299.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/bugFix' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/git-cafe-exercise/pull/new/ft/bugFix
+remote:
+To https://github.com/UmutesiMMA/git-cafe-exercise.git
+ * [new branch]      ft/bugFix -> ft/bugFix
+branch 'ft/bugFix' set up to track 'origin/ft/bugFix'.
+```
+### Exercise3
+```bash
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (main)
+$ git switch -c ft/hotfix
+Switched to a new branch 'ft/hotfix'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/hotfix)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/hotfix)
+$ git commit -m "changes on telephone"
+[ft/hotfix a097348] changes on telephone
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/hotfix)
+$ git push
+fatal: The current branch ft/hotfix has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/hotfix
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym2/Git/git-cafe-exercise (ft/hotfix)
+$ git push --set-upstream origin ft/hotfix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 297 bytes | 148.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/hotfix' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/git-cafe-exercise/pull/new/ft/hotfix
+remote:
+To https://github.com/UmutesiMMA/git-cafe-exercise.git
+ * [new branch]      ft/hotfix -> ft/hotfix
+branch 'ft/hotfix' set up to track 'origin/ft/hotfix'.
+```
 
